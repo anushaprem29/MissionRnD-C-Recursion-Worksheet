@@ -24,7 +24,19 @@
 #include "stdafx.h"
 
 
+/*
+0 steps - 0
+1 steps - 1
+2 steps - 2
+3 steps - 3
+4 steps - 5
+*/
+
+
+
 int get_steps(int s)
 {
-	return 0;
+	if (s <= 2) return s;
+	return get_steps(s - 1) + get_steps(s - 2);
 }
+
